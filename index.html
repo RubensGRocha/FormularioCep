@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.css" rel="stylesheet">
+  <title>Consulta CEP</title>
+</head>
+
+<body>
+  <div id="fade" class="hide">
+    <div id="loader" class="hide">
+      <span class="carregando">Carregando...</span>
+    </div>
+    <div id="message" class="hide">
+      <div class="alerta" role="alert">
+        <h4>Mensagem:</h4>
+        <p></p>
+        <button id="close-message" type="button" class="btn btn-secondary">
+          Fechar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Cadastre o seu endereço</h2>
+    <h5>Preencha os campos para podermos enviar seus produtos</h5>
+    <form id="endereco-form">
+      <div class="frm-row">
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" required id="cep" maxlength="8">
+      </div>
+      <div class="frm-row">
+        <label for="rua">Rua</label>
+        <input type="text" name="rua" id="rua" disabled required data-input>
+      </div>
+      <div class="frm-row">
+        <label for="bairro">Bairro</label>
+        <input type="text" name="bairro" id="bairro" required data-input disabled>
+      </div>
+      <div class="frm-row">
+        <label for="cidade">Cidade</label>
+        <input type="text" name="cidade" id="cidade" required data-input disabled>
+      </div>
+      <div class="frm-row">
+        <label for="estado">Estado</label>
+        <input type="text" name="estado" required data-input disabled id="estado">
+      </div>
+
+      <div class="box-botao">
+        <a href="descobrir-cep.html">Não sabe seu CEP?</a>
+        <button id="save-btn" type="submit">Cadastrar</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/consulta-endereco.js"></script>
+</body>
+
+</html>
